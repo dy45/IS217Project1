@@ -12,8 +12,11 @@ var admin = require('./controllers/admin');
   app.get('/courses', courses.list);
   app.get('/api/courses', courses.jsonlist);
   app.get('/courses/:cid', courses.findById);
+  app.get('/hunger, hunger.list');
+  app.get('/hunger, hunger.jsonlist');
   app.post('/courses/add', courses.add);
-  app.post('/courses/update/:cid', courses.update); 
+  app.post('/courses/update/:cid', courses.update);
+
   
   app.get('/users/', users.list);
   app.get('/api/users', users.jsonlist);
