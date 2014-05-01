@@ -1,123 +1,32 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
-  div
-    table
-      thead
-        tr 
-          th Course ID
-          th Course Name
-      tbody
-        each course, i in courses
-          tr(class=(i % 2 == 0) ? 'odd' : 'even')
-           td= course.cid
-           td 
-              a(href='/courses/' + course._id) #{course.title}
-
-meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
-title Simple Google Maps Example
-meta(http-equiv='Content-Type', content='text/html; charset=ISO-8859-1')
-meta(name='viewport', content='width=device-width, initial-scale=1.0')
-script(type='text/javascript', src='lib/settings.js')
-link(href='lib/bootstrap/css/bootstrap.css', rel='stylesheet')
-link(href='lib/base.css', rel='stylesheet')
-link(href='lib/bootstrap/css/bootstrap-responsive.css', rel='stylesheet')
-// Le HTML5 shim, for IE6-8 support of HTML5 elements
-//if lt IE 9
-  script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
-//if lt IE 9
-  script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
-//if lt IE 9
-  script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
-//if lt IE 9
-  script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
-script(type='text/javascript', src='lib/bootstrap/js/bootstrap.min.js')
-script(type='text/javascript', src='lib/bootstrap/js/jquery-latest.js')
-.container
-    .main-div
-        table(width='100%', cellspacing='0', cellpadding='8')
-            tbody
-                tr(bgcolor='#000000')
-                    td
-                        h4(style='color:#ffffff') Visualizing MongoDB Objects in Concept and Practice Sample Code
+html
+head
+    title OpenLayers + MapQuest
+    script(src='http://www.openlayers.org/api/OpenLayers.js')
+    link(rel='stylesheet', href='http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css')
+    script(src='http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js')
+    script(type='text/javascript')
+        var map;
+        var arrayOSM;
+        var baseOSM;
+        function init(){
+        map = new OpenLayers.Map('map');
+        arrayOSM = ["http://otile1.mqcdn.com/tiles/1.0.0/map/${z}/${x}/${y}.jpg",
+        "http://otile2.mqcdn.com/tiles/1.0.0/map/${z}/${x}/${y}.jpg",
+        "http://otile3.mqcdn.com/tiles/1.0.0/map/${z}/${x}/${y}.jpg",
+        "http://otile4.mqcdn.com/tiles/1.0.0/map/${z}/${x}/${y}.jpg"];
+        baseOSM = new OpenLayers.Layer.OSM("MapQuest-OSM Tiles", arrayOSM);
+        map.addLayer(baseOSM)
+        map.setCenter(new OpenLayers.LonLat(0, 0), 1);
+        }
+    body(onload='init()')
+        #map(style='height: 500px;')  A map will appear here
+h1 Incomes by U.S. State
+    table(border ='1', style='width: 300px;')
+        tr
+            th State
+            th Income
+        each income in incomes
+            tr
                 tr
-                    td(align='center')
-                        table(cellspacing='2', cellpadding='3', width='100%')
-                            tbody
-                                tr(style='border-bottom-width: 1px; border-bottom-style:dotted; border-bottom-color:#DADADA;')
-                                    td(bgcolor='#FFFFDB', width='50%')
-                                        h4 Simple Google Maps JavaScript API Example
-                                tr
-                                    td
-                                        table(width='100%', cellspacing='1', cellpadding='3')
-                                            tbody
-                                                tr(valign='top')
-                                                    td(width='100%', colspan='2', align='center')
-                                                        #map_canvas(style='height:450px; width:870px; border:1px solid;')
-                                                tr
-                                                    td(width='15%')  
-                                                    td(width='85%')
-// -------- JavaScript/JQuery Code --------
-script
-    var locations = null;
-    // runQuery -
-    $(document).ready(function () { runQuery(); });
-    function runQuery()
-    {
-    var queryUrl = "http://127.0.0.1/ikanow.mongodc2013.presentation/json/USDC_25_Records.json";
-    if (queryUrl.length > 0) {
-    $.ajax({
-    type: 'GET',
-    url: queryUrl,
-    async: true,
-    contentType: "application/json",
-    dataType: 'json',
-    success: function(msg) {
-    if (msg != null) {
-    locations = msg.rows;
-    }
-    }
-    });
-    loadMap();
-    }
-    }
-    // loadMap -
-    // Create Google Map script element and append the script to the page
-    // Update the API Key Value in settings.js or put your key in the .src value below
-    function loadMap() {
-    $('.googleScript').remove();
-    var script = document.createElement("script");
-    script.setAttribute('id', 'googleScript');
-    script.type = "text/javascript";
-    script.src = "https://maps.googleapis.com/maps/api/js?key=" + googleApiKey + "&sensor=false&callback=initializeMap";
-    document.body.appendChild(script);
-    }
-    // initializeMap -
-    function initializeMap() {
-    // Create the Map object and set the type, zoom level, and
-    // location to center the map on by latitude and longitude
-    var mapOptions = {
-    zoom: 11,
-    center: new google.maps.LatLng( 38.8964, -77.0262 ),
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-    // Iterate over our dataset and add a google.maps.Marker to the map for each
-    // location (latitude, longitude, and title)
-    for (var i=0; i < locations.length; i++) {
-    if (locations[i].latitude != null) {
-    var marker = new google.maps.Marker({
-    map: map,
-    position: new google.maps.LatLng( locations[i].latitude , locations[i].longitude ),
-    title: convertToTitleCase(locations[i].search_field)
-    });
-    }
-    }
-    }
-    // convertToTitleCase - simple code to turn string of words into title case
-    // or first letter of each word capitalized
-    function convertToTitleCase(str) {
-    return str.replace(/\\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-    }
+                    td #{income.State}
+                    td #{income.Income}
