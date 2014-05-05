@@ -10,16 +10,19 @@ var express = require('express')
   , passport = require('passport')
   , LocalStrategy = require('passport-local').Strategy
   , flash = require('connect-flash')
-  , path = require('path');
+  , path = require('path')
 
 var app = express();
 var env = process.env.NODE_ENV || 'development';
 var config = require('./config/config')[env];
 //Bootstrap db connection
-mongoose.connect('mongodb://localhost/learning');
+
+
+mongoose.connect( 'mongodb://localhost/test');
 require('./models/user');
 require('./models/course');
 require('./models/assignment');
+require('./models/house');
 app.use(flash());
 var User = mongoose.model("User");
 passport.use(new LocalStrategy(User.authenticate()));
@@ -28,6 +31,7 @@ passport.deserializeUser(User.deserializeUser());
 app.configure(function(){
   app.set('port', process.env.PORT ||8000);
   app.set('views', __dirname + '/views');
+  app.set('view engine', 'jade');
   app.set('title', 'Personal Learning Platform');
   app.use(express.favicon());
   app.use(express.logger('dev'));
@@ -40,7 +44,8 @@ app.configure(function(){
   app.use(app.router);
   app.use(require('stylus').middleware(__dirname + '/public'));
   app.use(express.static(path.join(__dirname, 'public')));
-  app.use(express['static'](__dirname + '/'));
+
+//** app.use(express['static'](__dirname + '/')); **//
 
 });
 
