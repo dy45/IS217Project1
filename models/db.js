@@ -1,14 +1,9 @@
-var mongoose = require('mongoose')
-    , Schema = mongoose.Schema;
+var mongoose = require('mongoose');
 
-/**
- * House Info Schema
- */
-var HouseSchema = new Schema({
-    state: String,
+var houseschema = new mongoose.Schema({
+        country: String,
+        state: String
+    });
+mongoose.model( 'house', houseschema );
 
-
-});
-
-var house = mongoose.model('House', HouseSchema);
 
