@@ -15,7 +15,7 @@ exports.houses = function(req, res){
 
 };
 
-var statedata = require('../models/state');
+/** var statedata = require('../models/state');
 
 exports.index = function(req, res) {
     var stateid = "CA";

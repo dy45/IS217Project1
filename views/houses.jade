@@ -1,0 +1,17 @@
+extends layout
+block content
+    p #{title}
+    div
+        table.table
+            thead
+                tr
+                    th State
+                    th Crime
+                    th Year
+                    th Count
+            tbody
+                each house, i in houses
+                    tr(class=(i % 2 == 0) ? 'odd' : 'even')
+                        td= house.state
+                        td= crime.namecrime
+                        td= house.year

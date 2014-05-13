@@ -1,0 +1,11 @@
+{
+  "rows": [
+      { "_id" : { "$oid" : "535fcc91e6f593ae7981af81" }, "street" : "2181 WINTERHAVEN CIR", "city" : "CAMERON PARK", "zip" : 95682, "state" : "CA", "beds" : 3, "baths" : 2, "sq__ft" : 0, "type" : "Residential", "sale_date" : "Thu May 15 00:00:00 EDT 2008", "price" : 224500, "latitude" : "38.69757", "longitude" : "-120.995739" },
+      { "_id" : { "$oid" : "535fcc91e6f593ae7981af82" }, "street" : "7540 HICKORY AVE", "city" : "ORANGEVALE", "zip" : 95662, "state" : "CA", "beds" : 3, "baths" : 1, "sq__ft" : 1456, "type" : "Residential", "sale_date" : "Thu May 15 00:00:00 EDT 2008", "price" : 225000, "latitude" : "38.703056", "longitude" : "-121.235221" },
+      { "_id" : { "$oid" : "535fcc91e6f593ae7981af87" }, "street" : "1909 YARNELL WAY", "city" : "ELK GROVE", "zip" : 95758, "state" : "CA", "beds" : 3, "baths" : 2, "sq__ft" : 1262, "type" : "Residential", "sale_date" : "Thu May 15 00:00:00 EDT 2008", "price" : 230000, "latitude" : "38.417382", "longitude" : "-121.484325" },
+      { "_id" : { "$oid" : "535fcc91e6f593ae7981af8a" }, "street" : "7933 DAFFODIL WAY", "city" : "CITRUS HEIGHTS", "zip" : 95610, "state" : "CA", "beds" : 3, "baths" : 2, "sq__ft" : 1216, "type" : "Residential", "sale_date" : "Thu May 15 00:00:00 EDT 2008", "price" : 235000, "latitude" : 38.708824, "longitude" : -121.256803 },
+      { "_id" : { "$oid" : "535fcc91e6f593ae7981af8b" }, "street" : "8304 RED FOX WAY", "city" : "ELK GROVE", "zip" : 95758, "state" : "CA", "beds" : 4, "baths" : 2, "sq__ft" : 1685, "type" : "Residential", "sale_date" : "Thu May 15 00:00:00 EDT 2008", "price" : 235301, "latitude" : 38.417, "longitude" : -121.397424 },
+      { "_id" : { "$oid" : "535fcc91e6f593ae7981af8c" }, "street" : "3882 YELLOWSTONE LN", "city" : "EL DORADO HILLS", "zip" : 95762, "state" : "CA", "beds" : 3, "baths" : 2, "sq__ft" : 1362, "type" : "Residential", "sale_date" : "Thu May 15 00:00:00 EDT 2008", "price" : 235738, "latitude" : 38.655245, "longitude" : -121.075915 }
+  ]
+
+}

@@ -1,8 +1,9 @@
 {
-  "offset" : 0,
   "rows": [
-    { "_id" : { "$oid" : "4d8bb3d3be07bb4fdf09be2e" }, "search_field" : "district of columbia", "country" : "United States", "country_code" : "US", "region" : "District of Columbia", "region_code" : "USDC", "population" : 0, "geoindex" : { "lat" : 38.8964, "lon" : -77.0262 } } ,
-    { "_id" : { "$oid" : "4d8bbbd2be07bb4f0c8ce32e" }, "search_field" : "adams morgan", "country" : "United States", "country_code" : "US", "city" : "adams morgan", "region" : "District of Columbia", "region_code" : "USDC", "population" : 0, "latitude" : "38.9213889", "longitude" : "-77.0425000", "geoindex" : { "lat" : 38.9213889, "lon" : -77.0425 } } ,
+      { "_id" : { "$oid" : "535fcc91e6f593ae7981af81" }, "street" : "2181 WINTERHAVEN CIR", "city" : "CAMERON PARK", "zip" : 95682, "state" : "CA", "beds" : 3, "baths" : 2, "sq__ft" : 0, "type" : "Residential", "sale_date" : "Thu May 15 00:00:00 EDT 2008", "price" : 224500, "latitude" : "38.69757", "longitude" : "-120.995739" },
+      { "_id" : { "$oid" : "535fcc91e6f593ae7981af82" }, "street" : "7540 HICKORY AVE", "city" : "ORANGEVALE", "zip" : 95662, "state" : "CA", "beds" : 3, "baths" : 1, "sq__ft" : 1456, "type" : "Residential", "sale_date" : "Thu May 15 00:00:00 EDT 2008", "price" : 225000, "latitude" : "38.703056", "longitude" : "-121.235221" },
+
+      { "_id" : { "$oid" : "4d8bbbd2be07bb4f0c8ce32e" }, "search_field" : "adams morgan", "country" : "United States", "country_code" : "US", "city" : "adams morgan", "region" : "District of Columbia", "region_code" : "USDC", "population" : 0, "latitude" : "38.5556", "longitude" : "-121.4625", "geoindex" : { "lat" : 9.5556, "lon" : -7.4625 } } ,
     { "_id" : { "$oid" : "4d8bbbd2be07bb4f0d8ce32e" }, "search_field" : "american university park", "country" : "United States", "country_code" : "US", "city" : "american university park", "region" : "District of Columbia", "region_code" : "USDC", "population" : 0, "latitude" : "38.9513889", "longitude" : "-77.0902778", "geoindex" : { "lat" : 38.9513889, "lon" : -77.0902778 } } ,
     { "_id" : { "$oid" : "4d8bbbd2be07bb4f0e8ce32e" }, "search_field" : "anacostia", "country" : "United States", "country_code" : "US", "city" : "anacostia", "region" : "District of Columbia", "region_code" : "USDC", "population" : 0, "latitude" : "38.8663889", "longitude" : "-76.9841667", "geoindex" : { "lat" : 38.8663889, "lon" : -76.9841667 } } ,
     { "_id" : { "$oid" : "4d8bbbd2be07bb4f0f8ce32e" }, "search_field" : "barnaby terrace", "country" : "United States", "country_code" : "US", "city" : "barnaby terrace", "region" : "District of Columbia", "region_code" : "USDC", "population" : 0, "latitude" : "38.8333333", "longitude" : "-76.9894444", "geoindex" : { "lat" : 38.8333333, "lon" : -76.9894444 } } ,
@@ -25,9 +26,8 @@
     { "_id" : { "$oid" : "4d8bbbd2be07bb4f208ce32e" }, "search_field" : "central northeast", "country" : "United States", "country_code" : "US", "city" : "central northeast", "region" : "District of Columbia", "region_code" : "USDC", "population" : 0, "latitude" : "38.8958333", "longitude" : "-76.9416667", "geoindex" : { "lat" : 38.8958333, "lon" : -76.9416667 } } ,
     { "_id" : { "$oid" : "4d8bbbd2be07bb4f218ce32e" }, "search_field" : "chevy chase", "country" : "United States", "country_code" : "US", "city" : "chevy chase", "region" : "District of Columbia", "region_code" : "USDC", "population" : 0, "latitude" : "38.9638889", "longitude" : "-77.0680556", "geoindex" : { "lat" : 38.9638889, "lon" : -77.06805559999999 } } ,
     { "_id" : { "$oid" : "4d8bbbd2be07bb4f228ce32e" }, "search_field" : "chevy chase heights", "country" : "United States", "country_code" : "US", "city" : "chevy chase heights", "region" : "District of Columbia", "region_code" : "USDC", "population" : 0, "latitude" : "38.9594444", "longitude" : "-77.0777778", "geoindex" : { "lat" : 38.9594444, "lon" : -77.07777780000001 } } ,
-    { "_id" : { "$oid" : "4d8bbbd2be07bb4f238ce32e" }, "search_field" : "chillum station", "country" : "United States", "country_code" : "US", "city" : "chillum station", "region" : "District of Columbia", "region_code" : "USDC", "population" : 0, "latitude" : "38.9555556", "longitude" : "-77.0044444", "geoindex" : { "lat" : 38.9555556, "lon" : -77.0044444 } }
-  ],
-  "total_rows" : 25 ,
-  "query" : { "region_code" : "USDC" } ,
-  "millis" : 14
+    { "_id" : { "$oid" : "4d8bbbd2be07bb4f238ce32e" }, "search_field" : "chillum station", "country" : "United States", "country_code" : "US", "city" : "chillum station", "region" : "District of Columbia", "region_code" : "USDC", "population" : 0, "latitude" : "38.9555556", "longitude" : "-77.0044444", "geoindex" : { "lat" : 38.9555556, "lon" : -77.0044444 } },
+    { "_id" : { "$oid" : "535fcc91e6f593ae7981af81" }, "search_field" : "chillum station", "street" : "2181 WINTERHAVEN CIR", "city" : "CAMERON PARK", "zip" : 95682, "state" : "CA", "beds" : 3, "baths" : 2, "sq__ft" : 0, "type" : "Residential", "sale_date" : "Thu May 15 00:00:00 EDT 2008", "price" : 224500, "latitude" : "38.69757", "longitude" : "-120.995739", "geoindex" : { "lat" : 38.9638889, "lon" : -77.06805559999999 } }
+
+  ]
 }
